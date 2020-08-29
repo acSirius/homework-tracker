@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:homework_tracker/reusable/AddTask.dart';
+import 'package:homework_tracker/reusable/TasksPage.dart';
 import 'package:homework_tracker/const.dart';
 
 class TasksPage extends StatelessWidget {
@@ -11,13 +11,16 @@ class TasksPage extends StatelessWidget {
         backgroundColor: kForegroundColor,
         centerTitle: true,
         title: Text(
-          'Homework assignments',
+          'Homework Tasks',
           style: kMainTextStyle,
         ),
       ),
       body: Column(
         children: [
-          AddTaskButton(),
+          //TODO: The added tasks should be displayed here
+          AddTaskButton(
+            title: 'Add task',
+          ),
         ],
       ),
     );

@@ -19,6 +19,7 @@ class AddTaskButton extends StatelessWidget {
             ),
             onPressed: () {
               //Redirect to the input page
+              print('Just some testing');
             },
             color: kMainAccentColor,
             textColor: Colors.white,

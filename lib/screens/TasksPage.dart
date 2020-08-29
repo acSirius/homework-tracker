@@ -26,24 +26,3 @@ class TasksPage extends StatelessWidget {
     );
   }
 }
-
-//Row(
-//mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//children: [
-//Expanded(
-//child: RaisedButton(
-//shape: RoundedRectangleBorder(
-//borderRadius: BorderRadius.circular(18.0),
-//side: BorderSide(color: kLighterAccentColor),
-//),
-//onPressed: () {},
-//color: kMainAccentColor,
-//textColor: Colors.white,
-//child: Text(
-//"Buy now".toUpperCase(),
-//style: TextStyle(fontSize: 14),
-//),
-//),
-//),
-//],
-//),

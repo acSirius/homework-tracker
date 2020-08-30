@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:homework_tracker/reusable/AddTaskButton.dart';
 import 'package:homework_tracker/const.dart';
+import 'package:homework_tracker/screens/InputTask.dart';
 
 class TasksPage extends StatelessWidget {
   @override
@@ -18,11 +18,19 @@ class TasksPage extends StatelessWidget {
       body: Column(
         children: [
           //TODO: The added tasks should be displayed here
-
-          AddTaskButton(
-            title: 'Add task',
-          ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => InputTask(),
+            ),
+          );
+        },
+        child: Icon(Icons.add),
+        backgroundColor: kMainAccentColor,
       ),
     );
   }

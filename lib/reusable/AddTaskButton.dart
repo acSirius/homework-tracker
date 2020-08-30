@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homework_tracker/const.dart';
+import 'package:homework_tracker/screens/InputTask.dart';
 
 class AddTaskButton extends StatelessWidget {
   AddTaskButton({@required this.title});
@@ -19,7 +20,12 @@ class AddTaskButton extends StatelessWidget {
             ),
             onPressed: () {
               //Redirect to the input page
-              print('Just some testing');
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => InputTask(),
+                ),
+              );
             },
             color: kMainAccentColor,
             textColor: Colors.white,

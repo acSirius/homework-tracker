@@ -6,7 +6,7 @@ class TasksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackGround,
+      backgroundColor: kBackGroundColor,
       appBar: AppBar(
         backgroundColor: kForegroundColor,
         centerTitle: true,
@@ -18,6 +18,7 @@ class TasksPage extends StatelessWidget {
       body: Column(
         children: [
           //TODO: The added tasks should be displayed here
+
           AddTaskButton(
             title: 'Add task',
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework_tracker/screens/InputTask.dart';
 import 'package:homework_tracker/screens/TasksPage.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => TasksPage(),
+        '/inputTask': (context) => InputTask(),
       },
     );
   }

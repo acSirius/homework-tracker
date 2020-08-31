@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homework_tracker/const.dart';
-
+import 'package:homework_tracker/reusable/SubmitTaskButton.dart';
 //Todo: make a page to input a new task. It should ask the user for the following: Title, subject, description and due date.
 
 class InputTask extends StatelessWidget {
@@ -33,7 +33,7 @@ class InputTask extends StatelessWidget {
             ),
           ),
 
-          //TODO: Add a subject dropdown tab and a due date calendar tab. They should be side by side
+          //TODO 1: Add a subject dropdown tab and a due date calendar tab. They should be side by side
         ],
       ),
       bottomNavigationBar: SubmitButton(
@@ -46,17 +46,22 @@ class InputTask extends StatelessWidget {
   }
 }
 
-class TitleInput extends StatelessWidget {
+class TitleInput extends StatefulWidget {
   TitleInput({@required this.inputHint, this.multiline});
   String inputHint;
   int multiline;
-  String variableName; // This is where whatever is typed will be saved
 
+  @override
+  _TitleInputState createState() => _TitleInputState();
+}
+
+class _TitleInputState extends State<TitleInput> {
+  String variableName;
   @override
   Widget build(BuildContext context) {
     return TextField(
       keyboardType: TextInputType.multiline,
-      maxLines: multiline,
+      maxLines: widget.multiline,
       decoration: new InputDecoration(
         //border: const OutlineInputBorder(),
         enabledBorder: const OutlineInputBorder(
@@ -66,38 +71,11 @@ class TitleInput extends StatelessWidget {
           borderSide: BorderSide(color: kMainAccentColor),
         ),
         labelStyle: new TextStyle(color: Colors.grey),
-        labelText: inputHint,
+        labelText: widget.inputHint,
       ),
       style: TextStyle(
         color: Colors.white,
       ),
-    );
-  }
-}
-
-class SubmitButton extends StatelessWidget {
-  SubmitButton({this.buttonFunction});
-  Function buttonFunction;
-
-  @override
-  Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Padding(
-        padding: const EdgeInsets.all(22.0),
-        child: Text(
-          'Add task',
-          style: kMainTextStyle,
-        ),
-      ),
-      color: kMainAccentColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(18),
-          topRight: Radius.circular(18),
-        ),
-        side: BorderSide(color: kMainAccentColor),
-      ),
-      onPressed: buttonFunction,
     );
   }
 }

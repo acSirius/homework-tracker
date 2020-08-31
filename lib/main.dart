@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:homework_tracker/screens/InputTask.dart';
 import 'package:homework_tracker/screens/TasksPage.dart';
 
 void main() {
@@ -10,11 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => TasksPage(),
-        '/inputTask': (context) => InputTask(),
-      },
+      home: TasksPage(),
     );
   }
 }

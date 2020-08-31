@@ -17,7 +17,7 @@ class TasksPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          //TODO: The added tasks should be displayed here
+          //TODO 2: The added tasks should be displayed here
         ],
       ),
       floatingActionButton: FloatingActionButton(

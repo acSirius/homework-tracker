@@ -22,6 +22,7 @@ class TasksPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          print('Go to task input');
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -31,6 +32,7 @@ class TasksPage extends StatelessWidget {
         },
         child: Icon(Icons.add),
         backgroundColor: kMainAccentColor,
+        splashColor: kLighterAccentColor,
       ),
     );
   }

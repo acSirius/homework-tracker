@@ -4,9 +4,6 @@ import 'package:homework_tracker/const.dart';
 //Todo: make a page to input a new task. It should ask the user for the following: Title, subject, description and due date.
 
 class InputTask extends StatelessWidget {
-  final _formKey = GlobalKey<FormState>();
-  String cityName;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,12 +36,11 @@ class InputTask extends StatelessWidget {
           //TODO: Add a subject dropdown tab and a due date calendar tab. They should be side by side
         ],
       ),
-      bottomNavigationBar: SafeArea(
-        child: SubmitButton(
-          buttonFunction: () {
-            print('Add a task now');
-          },
-        ),
+      bottomNavigationBar: SubmitButton(
+        buttonFunction: () {
+          print('Add a task now');
+          Navigator.pop(context);
+        },
       ),
     );
   }
@@ -95,7 +91,10 @@ class SubmitButton extends StatelessWidget {
       ),
       color: kMainAccentColor,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(18),
+          topRight: Radius.circular(18),
+        ),
         side: BorderSide(color: kMainAccentColor),
       ),
       onPressed: buttonFunction,

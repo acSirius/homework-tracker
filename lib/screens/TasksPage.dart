@@ -10,6 +10,7 @@ class TasksPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBackGroundColor,
       appBar: AppBar(
+        // automaticallyImplyLeading: false, // Todo: When app is further along, remove the comment. This removes the back button
         backgroundColor: kForegroundColor,
         centerTitle: true,
         title: Text(

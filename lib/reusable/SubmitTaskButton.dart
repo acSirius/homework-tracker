@@ -15,9 +15,18 @@ class _SubmitButtonState extends State<SubmitButton> {
     return RaisedButton(
       child: Padding(
         padding: const EdgeInsets.all(22.0),
-        child: Text(
-          'Add task',
-          style: kMainTextStyle,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.add),
+            SizedBox(
+              width: 8,
+            ),
+            Text(
+              'Add task',
+              style: kMainTextStyle,
+            ),
+          ],
         ),
       ),
       color: kMainAccentColor,

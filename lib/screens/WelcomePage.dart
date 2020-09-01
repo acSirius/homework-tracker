@@ -51,7 +51,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                       Text(
                         'Log In',
-                        style: kMainTextStyle.copyWith(fontSize: 18),
+                        style: kMainTextStyle,
                       ),
                     ],
                   ),
@@ -82,7 +82,7 @@ class WelcomePage extends StatelessWidget {
                       ),
                       Text(
                         'Register',
-                        style: kMainTextStyle.copyWith(fontSize: 18),
+                        style: kMainTextStyle,
                       ),
                     ],
                   ),

@@ -4,6 +4,8 @@ import 'package:homework_tracker/reusable/SubmitTaskButton.dart';
 //Todo: make a page to input a new task. It should ask the user for the following: Title, subject, description and due date.
 
 class InputTask extends StatelessWidget {
+  static String id = '/inputTask';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,8 +50,8 @@ class InputTask extends StatelessWidget {
 
 class TitleInput extends StatefulWidget {
   TitleInput({@required this.inputHint, this.multiline});
-  String inputHint;
-  int multiline;
+  final String inputHint; // Text that will be displayed as a hint
+  final int multiline; // Not required. null = infinite lines.
 
   @override
   _TitleInputState createState() => _TitleInputState();

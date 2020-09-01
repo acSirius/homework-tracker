@@ -3,6 +3,8 @@ import 'package:homework_tracker/const.dart';
 import 'package:homework_tracker/screens/InputTask.dart';
 
 class TasksPage extends StatelessWidget {
+  static String id = '/';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +25,7 @@ class TasksPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('Go to task input');
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => InputTask(),
-            ),
-          );
+          Navigator.pushNamed(context, '/inputTask');
         },
         child: Icon(Icons.add),
         backgroundColor: kMainAccentColor,

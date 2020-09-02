@@ -3,7 +3,7 @@ import 'package:homework_tracker/const.dart';
 
 class SubmitButton extends StatefulWidget {
   SubmitButton({this.buttonFunction});
-  Function buttonFunction;
+  final Function buttonFunction;
 
   @override
   _SubmitButtonState createState() => _SubmitButtonState();
@@ -18,7 +18,10 @@ class _SubmitButtonState extends State<SubmitButton> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.add),
+            Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
             SizedBox(
               width: 8,
             ),
